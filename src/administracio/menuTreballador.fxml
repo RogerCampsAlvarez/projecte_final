@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="administracio.MenuTreballadorController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="155.0" style="-fx-background-color: #99ccff;">
+         <children>
+            <Button fx:id="bCuina" mnemonicParsing="false" onAction="#cmdCuina" prefHeight="180.0" prefWidth="155.0" text="Cuina">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="bBarra" mnemonicParsing="false" onAction="#cmdBarra" prefHeight="180.0" prefWidth="155.0" text="Barra">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="bDesconectar" mnemonicParsing="false" onAction="#cmdDesconectar" prefHeight="40.0" prefWidth="155.0" style="-fx-background-color: FFB687;" text="Desconectar" />
+         </children></VBox>
+      <AnchorPane fx:id="anchorPane1" layoutX="155.0" prefHeight="400.0" prefWidth="445.0" />
+   </children>
+</AnchorPane>

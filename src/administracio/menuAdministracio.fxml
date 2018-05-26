@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="administracio.MenuAdministracioController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="155.0" style="-fx-background-color: #99ccff;">
+         <children>
+            <Button fx:id="bRegistrarUsuari" mnemonicParsing="false" onAction="#cmdRegistrarUsuari" prefHeight="61.0" prefWidth="155.0" text="Registrar Usuari" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="bGestionarComandes" mnemonicParsing="false" onAction="#cmdGestionarComandes" prefHeight="61.0" prefWidth="155.0" text="Gestionar Comandes" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="bGestionarTaules" layoutX="10.0" layoutY="90.0" mnemonicParsing="false" onAction="#cmdGestionarTaules" prefHeight="61.0" prefWidth="155.0" text="Gestionar Taules" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="bGestionarAliments" layoutX="10.0" layoutY="170.0" mnemonicParsing="false" onAction="#cmdGestionarAliments" prefHeight="61.0" prefWidth="155.0" text="Gestionar Aliments" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="bGestionarBegudes" layoutX="10.0" layoutY="250.0" mnemonicParsing="false" onAction="#cmdGestionarBegudes" prefHeight="61.0" prefWidth="155.0" text="Gestionar Begudes" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="bComptabilitat" layoutX="10.0" layoutY="274.0" mnemonicParsing="false" onAction="#cmdComptabilitat" prefHeight="61.0" prefWidth="155.0" text="Comptabilitat" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="bDesconectar" mnemonicParsing="false" onAction="#cmdDesconectar" prefHeight="36.0" prefWidth="155.0" style="-fx-background-color: FFB687;" text="Desconectar" />
+         </children></VBox>
+      <AnchorPane fx:id="anchorPane1" layoutX="155.0" prefHeight="400.0" prefWidth="445.0">
+         <children>
+            <Button fx:id="bCrearComandes" defaultButton="true" layoutX="45.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdCrearComandes" prefHeight="80.0" prefWidth="80.0" text="CREAR" visible="false" />
+            <Button fx:id="bModificarComandes" defaultButton="true" layoutX="183.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdModificarComandes" prefHeight="80.0" prefWidth="80.0" text="MODIFICAR" visible="false" />
+            <Button fx:id="bBorrarComandes" defaultButton="true" layoutX="323.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdBorrarComandes" prefHeight="80.0" prefWidth="80.0" text="BORRAR" visible="false" />
+            <Button fx:id="bCrearTaules" defaultButton="true" layoutX="45.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdCrearTaules" prefHeight="80.0" prefWidth="80.0" text="CREAR" visible="false" />
+            <Button fx:id="bModificarTaules" defaultButton="true" layoutX="183.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdModificarTaules" prefHeight="80.0" prefWidth="80.0" text="MODIFICAR" visible="false" />
+            <Button fx:id="bBorrarTaules" defaultButton="true" layoutX="323.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdBorrarTaules" prefHeight="80.0" prefWidth="80.0" text="BORRAR" visible="false" />
+            <Button fx:id="bCrearAliments" defaultButton="true" layoutX="45.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdCrearAliments" prefHeight="80.0" prefWidth="80.0" text="CREAR" visible="false" />
+            <Button fx:id="bModificarAliments" defaultButton="true" layoutX="183.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdModificarAliments" prefHeight="80.0" prefWidth="80.0" text="MODIFICAR" visible="false" />
+            <Button fx:id="bBorrarAliments" defaultButton="true" layoutX="323.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdBorrarAliments" prefHeight="80.0" prefWidth="80.0" text="BORRAR" visible="false" />
+            <Button fx:id="bCrearBegudes" defaultButton="true" layoutX="45.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdCrearBegudes" prefHeight="80.0" prefWidth="80.0" text="CREAR" visible="false" />
+            <Button fx:id="bModificarBegudes" defaultButton="true" layoutX="183.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdModificarBegudes" prefHeight="80.0" prefWidth="80.0" text="MODIFICAR" visible="false" />
+            <Button fx:id="bBorrarBegudes" defaultButton="true" layoutX="323.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdBorrarBegudes" prefHeight="80.0" prefWidth="80.0" text="BORRAR" visible="false" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

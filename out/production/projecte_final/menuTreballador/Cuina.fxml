@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menuTreballador.CuinaController">
+   <children>
+      <SplitPane dividerPositions="0.5801354401805869" prefHeight="400.0" prefWidth="445.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="taula_aliments" onMouseClicked="#clickItem" prefHeight="400.0" prefWidth="254.0">
+                    <columns>
+                      <TableColumn fx:id="columna1" prefWidth="160.0" text="NOM">
+                        <cellValueFactory><PropertyValueFactory property="nom" /></cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="columna2" prefWidth="44.0" text="TAULA">
+                        <cellValueFactory><PropertyValueFactory property="taula" /></cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="columna3" prefWidth="49.0" text="ORDRE">
+                        <cellValueFactory><PropertyValueFactory property="ordre" /></cellValueFactory>
+                      </TableColumn>
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="63.0" layoutY="29.0" text="Detalls" textAlignment="CENTER" underline="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <GridPane layoutX="7.0" layoutY="81.0" prefHeight="146.0" prefWidth="175.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="65.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="110.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Nom:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Taula:" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Ordre:" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Categoria:" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Hora:" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Lnom" GridPane.columnIndex="1" />
+                        <Label fx:id="Ltaula" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="Lordre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="Lcategoria" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="Lhora" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <Button fx:id="bRebreMenjar" defaultButton="true" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" onAction="#cmdRebrePlats" text="Rebre Menjar" />
+                  <Button fx:id="bBorrar" defaultButton="true" layoutX="122.0" layoutY="359.0" mnemonicParsing="false" onAction="#completarPlat" text="Borrar" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
