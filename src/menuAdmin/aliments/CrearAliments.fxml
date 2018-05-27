@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -53,6 +54,12 @@
                   <Font size="14.0" />
                </font>
             </Label>
+            <Label fx:id="Lnom" GridPane.columnIndex="1" />
+            <Label fx:id="Ldescripcio" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="Lpreu" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="Limatge" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="Lordre" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="Lcategoria" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
       <Label layoutX="108.0" layoutY="44.0" text="CREAR ALIMENTS">
@@ -60,5 +67,10 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
+      <Button fx:id="bGuardar" defaultButton="true" layoutX="365.0" layoutY="356.0" mnemonicParsing="false" text="Guardar">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
