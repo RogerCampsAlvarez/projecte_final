@@ -60,36 +60,64 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="ModificarTaules.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/ModificarTaules.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="183" lean-forward="false" selection-start-line="15" selection-start-column="183" selection-end-line="15" selection-end-column="183" />
-              <folding />
-            </state>
-          </provider>
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
             <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding>
+                <marker date="1527629264313" expanded="true" signature="3235:3248" ph="..." />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="CrearTaulesController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/CrearTaulesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="56" column="5" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="969">
+              <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CrearBegudesController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CrearBegudesController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/CrearBegudesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="48" column="29" lean-forward="false" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+            <state relative-caret-position="590">
+              <caret line="97" column="41" lean-forward="true" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CrearAlimentsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/CrearAlimentsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CrearAliments.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/CrearAliments.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="39" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1527631341581" expanded="true" signature="3758:3887" ph="..." />
+                <marker date="1527631341581" expanded="true" signature="3791:3866" ph="..." />
+                <marker date="1527631341581" expanded="true" signature="4245:4345" ph="..." />
+                <marker date="1527631341581" expanded="true" signature="4261:4330" ph="..." />
+                <marker date="1527631341581" expanded="true" signature="4469:4551" ph="..." />
+                <marker date="1527631341581" expanded="true" signature="4485:4535" ph="..." />
               </folding>
             </state>
           </provider>
@@ -97,14 +125,14 @@
       </file>
       <file leaf-file-name="CrearBegudes.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/CrearBegudes.fxml">
-          <provider selected="true" editor-type-id="text-editor">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+              <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
           </provider>
         </entry>
       </file>
@@ -121,11 +149,9 @@
       <file leaf-file-name="ModificarTaulesController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/ModificarTaulesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
+            <state relative-caret-position="952">
               <caret line="56" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,46 +159,27 @@
       <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/inici/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="15" />
+            <state relative-caret-position="529">
+              <caret line="101" column="36" lean-forward="false" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConnexioBD.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/inici/ConnexioBD.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="21" column="113" lean-forward="false" selection-start-line="21" selection-start-column="113" selection-end-line="21" selection-end-column="113" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CrearComandes.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/menuAdmin/comandes/CrearComandes.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="70" lean-forward="false" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="CrearTaules.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/CrearTaules.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
             <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <marker date="1527629264311" expanded="true" signature="1744:1870" ph="..." />
+                <marker date="1527629264311" expanded="true" signature="1744:1884" ph="..." />
+                <marker date="1527629264311" expanded="true" signature="1760:1854" ph="..." />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -217,7 +224,6 @@
         <option value="$PROJECT_DIR$/src/inici/ConnexioBD.java" />
         <option value="$PROJECT_DIR$/src/inici/Login.fxml" />
         <option value="$PROJECT_DIR$/src/inici/Main.java" />
-        <option value="$PROJECT_DIR$/src/inici/LoginController.java" />
         <option value="$PROJECT_DIR$/src/inici/SplashController.java" />
         <option value="$PROJECT_DIR$/src/menuTreballador/Barra.fxml" />
         <option value="$PROJECT_DIR$/src/objectes/Plat.java" />
@@ -238,13 +244,14 @@
         <option value="$PROJECT_DIR$/src/menuAdmin/aliments/ModificarAliments.fxml" />
         <option value="$PROJECT_DIR$/src/menuAdmin/begudes/ModificarBegudes.fxml" />
         <option value="$PROJECT_DIR$/src/menuAdmin/taules/ModificarTaules.fxml" />
-        <option value="$PROJECT_DIR$/src/menuAdmin/aliments/CrearAliments.fxml" />
         <option value="$PROJECT_DIR$/src/menuAdmin/taules/CrearTaules.fxml" />
         <option value="$PROJECT_DIR$/src/menuAdmin/taules/ModificarTaulesController.java" />
         <option value="$PROJECT_DIR$/src/inici/RegistreController.java" />
         <option value="$PROJECT_DIR$/src/menuAdmin/taules/CrearTaulesController.java" />
         <option value="$PROJECT_DIR$/src/menuAdmin/begudes/CrearBegudes.fxml" />
+        <option value="$PROJECT_DIR$/src/inici/LoginController.java" />
         <option value="$PROJECT_DIR$/src/menuAdmin/begudes/CrearBegudesController.java" />
+        <option value="$PROJECT_DIR$/src/menuAdmin/aliments/CrearAliments.fxml" />
       </list>
     </option>
   </component>
@@ -274,9 +281,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -355,7 +362,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -396,14 +403,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main (1)">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-    </configuration>
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -444,6 +443,14 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -478,6 +485,12 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -511,12 +524,6 @@
       <envs />
       <properties />
       <listeners />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
@@ -566,29 +573,28 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32724902" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.326572" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21196754" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2125163" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13875" sideWeight="0.6703755" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13854167" sideWeight="0.6703755" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1305638" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -659,14 +665,14 @@
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/GestionarComandesController.java" />
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/GestionarTaulesController.java" />
     <entry file="file://$PROJECT_DIR$/src/inici/Splash.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/Comptabilitat.fxml" />
@@ -709,14 +715,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuTreballador/Cuina.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="29" column="102" lean-forward="true" selection-start-line="29" selection-start-column="102" selection-end-line="29" selection-end-column="102" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuTreballador/CuinaController.java">
@@ -727,14 +733,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/inici/Login.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/GestionarTaules.fxml" />
@@ -748,25 +754,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/comandes/ModificarComandes.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="73" lean-forward="false" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/BorrarTaules.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/BorrarTaules.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/ModificarBegudesController.java">
@@ -805,14 +811,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/administracio/menuAdministracio.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/administracio/MenuTreballadorController.java">
@@ -830,35 +836,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/administracio/menuTreballador.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menuTreballador/Barra.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuTreballador/Barra.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="100" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="100" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/BorrarBegudesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/CrearAlimentsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
@@ -873,80 +872,68 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/BorrarAliments.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="45" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/CrearAliments.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="39" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/ModificarAliments.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="92" selection-end-column="13" />
-          <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/BorrarBegudes.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="58" lean-forward="false" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="68" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/ModificarBegudes.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/ModificarBegudes.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="180" lean-forward="false" selection-start-line="16" selection-start-column="180" selection-end-line="16" selection-end-column="180" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menuAdmin/comandes/BorrarComandes.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuAdmin/comandes/BorrarComandes.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="70" lean-forward="false" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menuAdmin/comandes/CrearComandes.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuAdmin/comandes/CrearComandes.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="70" lean-forward="false" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/inici/ConnexioBD.java">
@@ -957,44 +944,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/inici/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/ModificarTaules.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="183" lean-forward="false" selection-start-line="15" selection-start-column="183" selection-end-line="15" selection-end-column="183" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/ModificarTaulesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="56" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="1" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1527629264313" expanded="true" signature="3235:3248" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/CrearTaules.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/ModificarTaulesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="1" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/CrearTaules.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <marker date="1527629264311" expanded="true" signature="1744:1870" ph="..." />
+            <marker date="1527629264311" expanded="true" signature="1744:1884" ph="..." />
+            <marker date="1527629264311" expanded="true" signature="1760:1854" ph="..." />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/inici/RegistreController.java">
@@ -1007,31 +990,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/CrearTaulesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="56" column="5" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/CrearBegudes.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        <state relative-caret-position="969">
+          <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/inici/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="101" column="36" lean-forward="false" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/CrearBegudesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="48" column="29" lean-forward="false" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+        <state relative-caret-position="590">
+          <caret line="97" column="41" lean-forward="true" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/CrearAlimentsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/CrearBegudes.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/CrearAliments.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="39" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1527631341581" expanded="true" signature="3758:3887" ph="..." />
+            <marker date="1527631341581" expanded="true" signature="3791:3866" ph="..." />
+            <marker date="1527631341581" expanded="true" signature="4245:4345" ph="..." />
+            <marker date="1527631341581" expanded="true" signature="4261:4330" ph="..." />
+            <marker date="1527631341581" expanded="true" signature="4469:4551" ph="..." />
+            <marker date="1527631341581" expanded="true" signature="4485:4535" ph="..." />
           </folding>
         </state>
       </provider>

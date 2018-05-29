@@ -24,7 +24,7 @@ public class CrearBegudesController implements Initializable{
 
     ConnexioBD con = new ConnexioBD();
     String nom = "";
-    String preu = "";
+    Double preu;
     Alert alerterror = new Alert(Alert.AlertType.ERROR);
     Alert alertconfirm = new Alert(Alert.AlertType.CONFIRMATION);
     ResultSet rs;
@@ -34,7 +34,7 @@ public class CrearBegudesController implements Initializable{
     @FXML
     public void cmdGuardar() throws SQLException {
         nom = tbNom.getText();
-        preu = tbPreu.getText();
+        //preu = tbPreu.getText();
         rs = con.queryDB("select nom from begudes");
 
         while (rs.next()){
@@ -46,20 +46,23 @@ public class CrearBegudesController implements Initializable{
         //si no hi ha cap nom que es repeteixi amb aquest es guardara a la base de dades
         if (cont == 0){
             //comprova si el preu està ben escrit
-            if (preu.contains("[0-9]*[.]{1}[0-9]{2}")){
+            //if (preu.contains("[0-9]*[.]{1}[0-9]{2}")){
+            try{
+                preu = Double.parseDouble(tbPreu.getText());
+
                 //comprova que el combo estigui seleccionat
                 if (!cbTipus.getSelectionModel().isEmpty()){
                     //si el camp per entrar el nom no està buit
                     if (nom != null){
-                        con.execDB("Insert into begudes (nom, preu, tipus) values ('" + nom + "');");
+                        con.execDB("Insert into begudes (nom, preu, tipus) values ('" + nom + "'," + preu + ",'" + cbTipus.getSelectionModel().getSelectedItem().toString() + "');");
                         alertconfirm.setTitle("Guardat");
-                        alertconfirm.setHeaderText("Taula guardada amb exit!");
+                        alertconfirm.setHeaderText("Beguda guardada amb exit!");
                         alertconfirm.show();
-                        tbNom.setText("");
+                        //tbNom.setText("");
                     }
                     else{
                         alerterror.setTitle("Error");
-                        alerterror.setHeaderText("La taula ha de tenir un nom.");
+                        alerterror.setHeaderText("La beguda ha de tenir un nom.");
                         alerterror.show();
                     }
                 }
@@ -69,15 +72,15 @@ public class CrearBegudesController implements Initializable{
                     alerterror.show();
                 }
             }
-            else{
+            catch(NumberFormatException e){
                 alerterror.setTitle("Error");
-                alerterror.setHeaderText("El preu no es valid, ha de ser escrit de manera que hi hagi un numero, un punt, i acavat amb dos decimals. Per exemple: 12.50 o 2.00");
+                alerterror.setHeaderText("El preu no es valid, ha de ser escrit de manera que hi hagi un numero, un punt, i acavat en dos decimals. Per exemple: 12.50 o 2.00");
                 alerterror.show();
             }
         }
         else{
             alerterror.setTitle("Error");
-            alerterror.setHeaderText("La taula està repetida.");
+            alerterror.setHeaderText("La beguda està repetida.");
             alerterror.show();
             cont = 0;
         }
