@@ -54,7 +54,7 @@ public class RegistreController implements Initializable{
                 alertError.show();
             }
             else {
-                //si les contrasenyes coinsideixen
+                //si les contrasenyes coincideixen
                 if (passwordField.getText().equals(newPasswordField.getText())){
                     con.execDB("insert into usuaris values ('" + userField.getText() + "','" + passwordField.getText() + "'," + adminCheckBox.isSelected() + ");");
                     alertConfirmation.setTitle("Registre");

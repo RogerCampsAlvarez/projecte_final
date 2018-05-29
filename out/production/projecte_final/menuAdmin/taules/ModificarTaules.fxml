@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="menuAdmin.taules.ModificarTaulesController"
-            prefHeight="400.0" prefWidth="445.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menuAdmin.taules.ModificarTaulesController">
+    <children>
+        <SplitPane dividerPositions="0.309255079006772" prefHeight="400.0" prefWidth="445.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <TableView prefHeight="398.0" prefWidth="134.0">
+                            <columns>
+                                <TableColumn fx:id="taula_noms" prefWidth="133.0" text="NOM">
+                                    <cellValueFactory><PropertyValueFactory property="nom" /></cellValueFactory>
+                                </TableColumn>
+                            </columns>
+                        </TableView>
+                    </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="186.0" prefWidth="185.0">
+                    <children>
+                        <Label layoutX="132.0" layoutY="36.0" text="Detalls" underline="true">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <GridPane layoutX="32.0" layoutY="83.0" prefHeight="33.0" prefWidth="260.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="45.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="0.0" prefWidth="180.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label />
+                                <Label text="Nom:">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font></Label>
+                                <TextField fx:id="tbNom" GridPane.columnIndex="1" />
+                            </children>
+                        </GridPane>
+                        <Button fx:id="bGuardar" defaultButton="true" layoutX="230.0" layoutY="359.0" mnemonicParsing="false" text="Guardar" />
+                    </children></AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
 </AnchorPane>
