@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.scene.control.cell.PropertyValueFactory?>
 <AnchorPane prefHeight="400.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menuAdmin.comptabilitat.ComptabilitatController">
    <children>
       <SplitPane dividerPositions="0.4582392776523702" prefHeight="400.0" prefWidth="445.0">
@@ -17,8 +18,12 @@
                <children>
                   <TableView fx:id="taulaCaixa" prefHeight="400.0" prefWidth="220.0">
                     <columns>
-                      <TableColumn prefWidth="100.0" text="DIA" />
-                      <TableColumn prefWidth="100.0" text="CAIXA" />
+                      <TableColumn prefWidth="100.0" text="DIA">
+                          <cellValueFactory><PropertyValueFactory property="dia" /></cellValueFactory>
+                      </TableColumn>
+                      <TableColumn prefWidth="100.0" text="CAIXA">
+                          <cellValueFactory><PropertyValueFactory property="caixa" /></cellValueFactory>
+                      </TableColumn>
                     </columns>
                   </TableView>
                </children></AnchorPane>

@@ -43,8 +43,7 @@
          </children></VBox>
       <AnchorPane fx:id="anchorPane1" layoutX="155.0" prefHeight="400.0" prefWidth="445.0">
          <children>
-            <Button fx:id="bCrearComandes" defaultButton="true" layoutX="45.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdCrearComandes" prefHeight="80.0" prefWidth="80.0" text="CREAR" visible="false" />
-            <Button fx:id="bModificarComandes" defaultButton="true" layoutX="183.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdModificarComandes" prefHeight="80.0" prefWidth="80.0" text="MODIFICAR" visible="false" />
+            <Button fx:id="bVisualitzarComandes" defaultButton="true" layoutX="45.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdVisualitzarComandes" prefHeight="80.0" prefWidth="91.0" text="VISUALITZAR" visible="false" />
             <Button fx:id="bBorrarComandes" defaultButton="true" layoutX="323.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdBorrarComandes" prefHeight="80.0" prefWidth="80.0" text="BORRAR" visible="false" />
             <Button fx:id="bCrearTaules" defaultButton="true" layoutX="45.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdCrearTaules" prefHeight="80.0" prefWidth="80.0" text="CREAR" visible="false" />
             <Button fx:id="bModificarTaules" defaultButton="true" layoutX="183.0" layoutY="151.0" mnemonicParsing="false" onAction="#cmdModificarTaules" prefHeight="80.0" prefWidth="80.0" text="MODIFICAR" visible="false" />

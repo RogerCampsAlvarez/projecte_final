@@ -41,15 +41,13 @@ public class MenuAdministracioController implements Initializable{
 
     //botons crear, borrar, modificar
     @FXML
-    private Button bCrearComandes;
+    private Button bVisualitzarComandes;
     @FXML
     private Button bCrearTaules;
     @FXML
     private Button bCrearAliments;
     @FXML
     private Button bCrearBegudes;
-    @FXML
-    private Button bModificarComandes;
     @FXML
     private Button bModificarTaules;
     @FXML
@@ -164,8 +162,7 @@ public class MenuAdministracioController implements Initializable{
     }
 
     void visibilitatBotonsComandes(boolean estat){
-        bCrearComandes.setVisible(estat);
-        bModificarComandes.setVisible(estat);
+        bVisualitzarComandes.setVisible(estat);
         bBorrarComandes.setVisible(estat);
     }
 
@@ -257,19 +254,9 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
-    public void cmdCrearComandes(ActionEvent event){
+    public void cmdVisualitzarComandes(ActionEvent event){
         try {
-            anchorPane1.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/menuAdmin/comandes/CrearComandes.fxml")));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        var++;
-    }
-
-    @FXML
-    public void cmdModificarComandes(ActionEvent event){
-        try {
-            anchorPane1.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/menuAdmin/comandes/ModificarComandes.fxml")));
+            anchorPane1.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/menuAdmin/comandes/VisualitzarComandes.fxml")));
         } catch (IOException e) {
             e.printStackTrace();
         }
