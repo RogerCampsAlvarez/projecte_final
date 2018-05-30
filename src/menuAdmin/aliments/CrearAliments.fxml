@@ -28,7 +28,7 @@
             <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Nom:">
+            <Label text="*Nom:">
                <font>
                   <Font size="14.0" />
                </font>
@@ -38,7 +38,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label text="Preu:" GridPane.rowIndex="2">
+            <Label text="*Preu:" GridPane.rowIndex="2">
                <font>
                   <Font size="14.0" />
                </font>
@@ -48,12 +48,12 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label text="Ordre:" GridPane.rowIndex="4">
+            <Label text="*Ordre:" GridPane.rowIndex="4">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label text="Categoria:" GridPane.rowIndex="5">
+            <Label text="*Categoria:" GridPane.rowIndex="5">
                <font>
                   <Font size="14.0" />
                </font>
@@ -82,7 +82,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Button fx:id="bGuardar" defaultButton="true" layoutX="365.0" layoutY="356.0" mnemonicParsing="false" text="Guardar">
+      <Button fx:id="bGuardar" defaultButton="true" layoutX="365.0" layoutY="356.0" mnemonicParsing="false" onAction="#cmdGuardar" text="Guardar">
          <font>
             <Font size="14.0" />
          </font>

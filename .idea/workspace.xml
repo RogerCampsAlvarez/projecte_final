@@ -58,27 +58,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ModificarBegudes.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/ModificarBegudes.fxml">
+      <file leaf-file-name="CrearBegudesController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/CrearBegudesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="46" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="26" selection-end-column="46" />
+            <state relative-caret-position="85">
+              <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="95" selection-end-column="5" />
               <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModificarBegudesController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/ModificarBegudesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="90" column="40" lean-forward="false" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -109,6 +94,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ModificarAliments.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/ModificarAliments.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="92" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CrearAliments.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/CrearAliments.fxml">
           <provider editor-type-id="text-editor">
@@ -122,11 +120,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ModificarAliments.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/ModificarAliments.fxml">
+      <file leaf-file-name="CrearAlimentsController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/CrearAlimentsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="549">
+              <caret line="120" column="51" lean-forward="false" selection-start-line="120" selection-start-column="51" selection-end-line="120" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CrearBegudes.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/CrearBegudes.fxml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="92" selection-end-column="13" />
+            <state relative-caret-position="425">
+              <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -170,20 +180,6 @@
           </provider>
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModificarTaulesController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/ModificarTaulesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1819">
-              <caret line="123" column="9" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="123" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3924#3925#0" expanded="true" />
-                <element signature="e#3957#3958#0" expanded="true" />
-              </folding>
-            </state>
           </provider>
         </entry>
       </file>
@@ -247,7 +243,6 @@
         <option value="$PROJECT_DIR$/src/menuAdmin/taules/CrearTaulesController.java" />
         <option value="$PROJECT_DIR$/src/menuAdmin/begudes/CrearBegudes.fxml" />
         <option value="$PROJECT_DIR$/src/inici/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/menuAdmin/aliments/CrearAliments.fxml" />
         <option value="$PROJECT_DIR$/src/objectes/Taula.java" />
         <option value="$PROJECT_DIR$/src/menuAdmin/taules/ModificarTaules.fxml" />
         <option value="$PROJECT_DIR$/src/objectes/Beguda.java" />
@@ -261,15 +256,16 @@
         <option value="$PROJECT_DIR$/src/menuAdmin/begudes/BorrarBegudesController.java" />
         <option value="$PROJECT_DIR$/src/menuAdmin/taules/BorrarTaulesController.java" />
         <option value="$PROJECT_DIR$/src/menuAdmin/aliments/BorrarAliments.fxml" />
+        <option value="$PROJECT_DIR$/src/menuAdmin/aliments/CrearAliments.fxml" />
+        <option value="$PROJECT_DIR$/src/menuAdmin/aliments/CrearAlimentsController.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1198" />
-    <option name="y" value="707" />
-    <option name="width" value="167" />
-    <option name="height" value="40" />
+    <option name="x" value="793" />
+    <option name="width" value="814" />
+    <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -593,12 +589,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21121252" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21121252" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12875" sideWeight="0.6703755" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.04125" sideWeight="0.6703755" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -895,13 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/CrearAlimentsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/objectes/Taula.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -916,17 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/CrearBegudes.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/ModificarTaules.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="1003">
@@ -936,16 +914,6 @@
       </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/CrearBegudesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="55" column="53" lean-forward="false" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/objectes/Beguda.java">
@@ -961,9 +929,9 @@
         <state relative-caret-position="1819">
           <caret line="123" column="9" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="123" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3924#3925#0" expanded="true" />
-            <element signature="e#3957#3958#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3924#3925#0" expanded="false" />
+            <element signature="e#3957#3958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -987,17 +955,6 @@
             <element signature="imports" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/BorrarBegudes.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="182" lean-forward="false" selection-start-line="10" selection-start-column="182" selection-end-line="10" selection-end-column="182" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/BorrarBegudesController.java">
@@ -1043,6 +1000,47 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/ModificarAliments.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="92" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/CrearBegudesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="95" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/CrearBegudes.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menuAdmin/begudes/BorrarBegudes.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="182" lean-forward="false" selection-start-line="10" selection-start-column="182" selection-end-line="10" selection-end-column="182" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/CrearAliments.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1054,15 +1052,14 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/ModificarAliments.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="92" selection-end-column="13" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/src/menuAdmin/aliments/CrearAlimentsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="120" column="51" lean-forward="false" selection-start-line="120" selection-start-column="51" selection-end-line="120" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
   </component>
