@@ -60,7 +60,7 @@ public class CrearBegudesController implements Initializable{
                         alertconfirm.setTitle("Guardat");
                         alertconfirm.setHeaderText("Beguda guardada amb exit!");
                         alertconfirm.show();
-                        //tbNom.setText("");
+                        clearFormulari();
                     }
                     else{
                         alerterror.setTitle("Error");
@@ -86,6 +86,12 @@ public class CrearBegudesController implements Initializable{
             alerterror.show();
             cont = 0;
         }
+    }
+
+    private void clearFormulari(){
+        tbNom.setText("");
+        tbPreu.setText("");
+        cbTipus.setValue(null);
     }
 
     @Override

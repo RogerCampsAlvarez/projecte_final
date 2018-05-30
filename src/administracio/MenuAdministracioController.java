@@ -134,7 +134,21 @@ public class MenuAdministracioController implements Initializable{
 
     @FXML
     void cmdComptabilitat(ActionEvent event) {
+        visibilitatBotonsComandes(false);
+        visibilitatBotonsAliments(false);
+        visibilitatBotonsBegudes(false);
+        visibilitatBotonsTaules(false);
 
+        if (var != 0){
+            recarregarEscena();
+        }
+
+        try {
+            anchorPane1.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/menuAdmin/comptabilitat/Comptabilitat.fxml")));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        var++;
     }
 
     @FXML

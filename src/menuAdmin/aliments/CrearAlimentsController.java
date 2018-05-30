@@ -7,15 +7,19 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import combos.Tipus;
+import javafx.scene.layout.GridPane;
+import javafx.stage.FileChooser;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Base64;
 import java.util.ResourceBundle;
 
 public class CrearAlimentsController implements Initializable{
@@ -29,7 +33,13 @@ public class CrearAlimentsController implements Initializable{
     ComboBox cbOrdre;
     @FXML
     ComboBox cbCategoria;
+    @FXML
+    GridPane gridPane;
+    @FXML
+    Button bBuscarImg;
 
+    File fileImg;
+    FileChooser fc = new FileChooser();
     ConnexioBD con = new ConnexioBD();
     Categoria c = new Categoria();
     Ordre o= new Ordre();
@@ -49,7 +59,6 @@ public class CrearAlimentsController implements Initializable{
     public void cmdGuardar() throws SQLException {
         nom = tbNom.getText();
         descrpcio = taDescripcio.getText();
-        imatge = "";
         ordre = cbOrdre.getSelectionModel().getSelectedItem().toString();
         categoria = cbCategoria.getSelectionModel().getSelectedItem().toString();
         //preu = tbPreu.getText();
@@ -78,7 +87,7 @@ public class CrearAlimentsController implements Initializable{
                             alertconfirm.setTitle("Guardat");
                             alertconfirm.setHeaderText("Aliment guardat amb exit!");
                             alertconfirm.show();
-                            //tbNom.setText("");
+                            clearFormulari();
                         }
                         else{
                             alerterror.setTitle("Error");
@@ -110,6 +119,36 @@ public class CrearAlimentsController implements Initializable{
             alerterror.show();
             cont = 0;
         }
+    }
+
+    private void clearFormulari(){
+        tbNom.setText("");
+        tbPreu.setText("");
+        taDescripcio.setText("");
+        cbOrdre.setValue(null);
+        cbCategoria.setValue(null);
+    }
+
+    @FXML
+    private void cmdBuscarImg(){
+        fileImg = fc.showOpenDialog(null);
+        imatge = encodeFileToBase64Binary(fileImg);
+    }
+
+    private String encodeFileToBase64Binary(File file){
+        String encodedfile = null;
+        try {
+            FileInputStream fileInputStreamReader = new FileInputStream(file);
+            byte[] bytes = new byte[(int)file.length()];
+            fileInputStreamReader.read(bytes);
+            encodedfile = Base64.getEncoder().encode(bytes).toString();
+        } catch (Exception e) {
+            alerterror.setTitle("Error");
+            alerterror.setHeaderText("Arxiu incorrecte");
+            alerterror.show();
+        }
+
+        return encodedfile;
     }
 
     @Override
