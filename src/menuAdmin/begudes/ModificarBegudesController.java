@@ -11,7 +11,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import objectes.Beguda;
-import objectes.Tipus;
+import combos.Tipus;
 
 import java.net.URL;
 import java.sql.ResultSet;

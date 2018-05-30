@@ -1,21 +1,24 @@
 package menuAdmin.aliments;
 
+import combos.Categoria;
+import combos.Ordre;
 import inici.ConnexioBD;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import objectes.Tipus;
+import combos.Tipus;
 
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class CrearAlimentsController {
+public class CrearAlimentsController implements Initializable{
     @FXML
     TextField tbNom;
     @FXML
@@ -28,7 +31,8 @@ public class CrearAlimentsController {
     ComboBox cbCategoria;
 
     ConnexioBD con = new ConnexioBD();
-    Tipus t = new Tipus();
+    Categoria c = new Categoria();
+    Ordre o= new Ordre();
     String nom = "";
     String descrpcio;
     Double preu;
@@ -110,14 +114,12 @@ public class CrearAlimentsController {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ObservableList<String> tipus =
-                FXCollections.observableArrayList(t.getTipus());
-        cb.getItems().addAll(tipus);
+        ObservableList<String> ordre =
+                FXCollections.observableArrayList(o.getOrdre());
+        cbOrdre.getItems().addAll(ordre);
 
-
-
-
-
-        FALTA CANVIAR AIXO I FER-HO PELS DOS COMBOS
+        ObservableList<String> categoria =
+                FXCollections.observableArrayList(c.getCategoria());
+        cbCategoria.getItems().addAll(categoria);
     }
 }
