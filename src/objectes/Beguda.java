@@ -11,13 +11,24 @@ public class Beguda {
     private SimpleStringProperty taula;
     private SimpleStringProperty tipus;
     private SimpleStringProperty horaArrivada;
+    private SimpleStringProperty preu;
 
+
+    //ho faig servir per la barra
     public Beguda(int id, String nom, String taula, String tipus, String horaArrivada){
         this.id = id;
         this.nom = new SimpleStringProperty(nom);
         this.taula = new SimpleStringProperty(taula);
         this.tipus = new SimpleStringProperty(tipus);
         this.horaArrivada = new SimpleStringProperty(horaArrivada);
+    }
+
+    //ho faig servir per modificar begudes
+    public Beguda(int id, String nom, String preu, String tipus){
+        this.id = id;
+        this.nom = new SimpleStringProperty(nom);
+        this.tipus = new SimpleStringProperty(tipus);
+        this.preu = new SimpleStringProperty(preu);
     }
 
     public int getId(){ return id; }
@@ -36,5 +47,9 @@ public class Beguda {
 
     public String getHora() {
         return horaArrivada.get();
+    }
+
+    public String getPreu() {
+        return preu.get();
     }
 }

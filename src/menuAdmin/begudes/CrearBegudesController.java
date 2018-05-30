@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import objectes.Tipus;
 
 import java.net.URL;
 import java.sql.ResultSet;
@@ -23,6 +24,7 @@ public class CrearBegudesController implements Initializable{
     ComboBox cbTipus;
 
     ConnexioBD con = new ConnexioBD();
+    Tipus t = new Tipus();
     String nom = "";
     Double preu;
     Alert alerterror = new Alert(Alert.AlertType.ERROR);
@@ -89,12 +91,7 @@ public class CrearBegudesController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ObservableList<String> tipus =
-                FXCollections.observableArrayList(
-                        "Refresc",
-                        "Cervesa",
-                        "Alcohol",
-                        "Vi"
-                );
+                FXCollections.observableArrayList(t.getTipus());
         cbTipus.getItems().addAll(tipus);
     }
 }

@@ -1,57 +1,141 @@
 package menuAdmin.taules;
 
 import inici.ConnexioBD;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import objectes.Taula;
 
+import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 
 
-public class ModificarTaulesController {
+public class ModificarTaulesController implements Initializable{
     @FXML
     TextField tbNom;
+    @FXML
+    TableView<Taula> taula_taules;
 
+    private List<Taula> llista = new ArrayList<Taula>();
+    private ObservableList<Taula> llistaTaules = FXCollections.observableList(llista);
     ConnexioBD con = new ConnexioBD();
-    String nom = "";
     Alert alerterror = new Alert(Alert.AlertType.ERROR);
     Alert alertconfirm = new Alert(Alert.AlertType.CONFIRMATION);
     ResultSet rs;
-    int cont = 0;
 
 
     @FXML
-    public void cmdGuardar() throws SQLException {
-        nom = tbNom.getText();
-        rs = con.queryDB("select nom from taula");
+    private void clickItem(MouseEvent event) {
+        tbNom.setText(taula_taules.getSelectionModel().getSelectedItem().getNom());
+    }
 
-        while (rs.next()){
-            if (rs.getString("nom") == nom){
-                cont++;
+
+    private void buscarBD() throws ClassNotFoundException, SQLException {
+        int id;
+        String nom;
+
+        System.out.println("Buscant a la base de dades...");
+        try {
+            rs = con.queryDB(
+                    "select * from taula order by nom"
+            );
+            while (rs.next()) {
+                id = rs.getInt("id_taula");
+                nom = rs.getString("nom");
+
+                pujarATableview(id, nom);
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        System.out.println("Ha acavat de buscar a la base de dades");
+    }
 
-        //si no hi ha cap nom que es repeteixi amb aquest es guardara a la base de dades
-        if (cont == 0){
-            //si el camp per entrar el nom no està buit
-            if (nom != null){
-                con.execDB("Insert into taula (nom) values (" + tbNom.getText() + ");");
-                alertconfirm.setTitle("Guardat");
-                alertconfirm.setHeaderText("Taula guardada amb exit!");
-                alertconfirm.show();
-                tbNom.setText("");
+
+    private void pujarATableview(int idTaula, String nomTaula) {
+        llistaTaules.add(new Taula(idTaula, nomTaula));
+        taula_taules.setItems(llistaTaules);
+    }
+
+    private void borrarTableView(){
+        llistaTaules.clear();
+        taula_taules.setItems(llistaTaules);
+    }
+
+    @FXML
+    public void cmdGuardar() throws SQLException {
+        //si no s'ha seleccionat res
+        if (!taula_taules.getSelectionModel().isEmpty()){
+
+            String nom = tbNom.getText();
+            int id_antic = taula_taules.getSelectionModel().getSelectedItem().getId();
+            int cont = 0;
+
+
+            rs = con.queryDB("select nom from taula");
+
+            while (rs.next()){
+                if (rs.getString("nom").equals(nom)){
+                    cont++;
+                }
             }
-            else{
+
+            //si el nom a entrar no està repetit
+            if (cont == 0){
+                //si el nom no està buit
+                if (!tbNom.equals("")){
+                    con.execDB("update taula set nom = '" + nom + "' where id_taula = " + id_antic + ";");
+                    alertconfirm.setTitle("Guardat");
+                    alertconfirm.setHeaderText("Taula modificada amb exit!");
+                    alertconfirm.show();
+                    borrarTableView();
+                    borrarCampsFormulari();
+                    try {
+                        buscarBD();
+                    } catch (ClassNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else {
+                    alerterror.setTitle("Error");
+                    alerterror.setHeaderText("El valor a guardar està buit.");
+                    alerterror.show();
+                }
+            }
+            else {
                 alerterror.setTitle("Error");
-                alerterror.setHeaderText("La taula ha de tenir un nom.");
+                alerterror.setHeaderText("El nom està repetit.");
                 alerterror.show();
             }
         }
         else{
             alerterror.setTitle("Error");
-            alerterror.setHeaderText("La taula està repetida.");
+            alerterror.setHeaderText("Seleccionar taula a modificar");
             alerterror.show();
+        }
+    }
+
+    private void borrarCampsFormulari(){
+        tbNom.setText("");
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        try {
+            buscarBD();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }
