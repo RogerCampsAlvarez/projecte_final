@@ -38,7 +38,7 @@ public class BorrarTaulesController implements Initializable{
         System.out.println("Buscant a la base de dades...");
         try {
             rs = con.queryDB(
-                    "select * from taula order by nom"
+                    "select * from taula WHERE NOT id_taula IN ( SELECT id_taula FROM comanda );"
             );
             while (rs.next()) {
                 id = rs.getInt("id_taula");

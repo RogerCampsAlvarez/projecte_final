@@ -73,14 +73,34 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ComptabilitatController.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ComptabilitatController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/menuAdmin/comptabilitat/ComptabilitatController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="419">
+                <state relative-caret-position="11">
                   <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="BorrarTaulesController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/BorrarTaulesController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-170">
+                  <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CrearTaulesController.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/CrearTaulesController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="312">
+                  <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -213,7 +233,6 @@
         <option value="$PROJECT_DIR$/src/menuAdmin/taules/BorrarTaules.fxml" />
         <option value="$PROJECT_DIR$/src/menuAdmin/begudes/BorrarBegudes.fxml" />
         <option value="$PROJECT_DIR$/src/menuAdmin/begudes/BorrarBegudesController.java" />
-        <option value="$PROJECT_DIR$/src/menuAdmin/taules/BorrarTaulesController.java" />
         <option value="$PROJECT_DIR$/src/menuAdmin/aliments/BorrarAliments.fxml" />
         <option value="$PROJECT_DIR$/src/combos/Tipus.java" />
         <option value="$PROJECT_DIR$/src/combos/Categoria.java" />
@@ -228,6 +247,7 @@
         <option value="$PROJECT_DIR$/src/inici/ConnexioBD.java" />
         <option value="$PROJECT_DIR$/src/menuAdmin/comptabilitat/Comptabilitat.fxml" />
         <option value="$PROJECT_DIR$/src/menuAdmin/comptabilitat/ComptabilitatController.java" />
+        <option value="$PROJECT_DIR$/src/menuAdmin/taules/BorrarTaulesController.java" />
       </list>
     </option>
   </component>
@@ -792,13 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/CrearTaulesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/inici/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1394">
@@ -829,6 +842,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1819">
           <caret line="123" column="9" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="123" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3924#3925#0" expanded="false" />
+            <element signature="e#3957#3958#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -883,13 +901,6 @@
         <state relative-caret-position="119">
           <caret line="7" column="62" lean-forward="false" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/BorrarTaulesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1090,11 +1101,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuAdmin/comptabilitat/ComptabilitatController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
+        <state relative-caret-position="11">
           <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/BorrarTaulesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menuAdmin/taules/CrearTaulesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
