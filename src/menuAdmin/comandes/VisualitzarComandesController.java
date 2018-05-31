@@ -71,7 +71,7 @@ public class VisualitzarComandesController implements Initializable{
             try {
                 rs = con.queryDB(
                         "select c.id_comanda as id_comanda, c.dia as dia, c.finalitzada as finalitzada, t.nom as nom_taula " +
-                                "from comanda c inner join taula t on c.id_taula = t.id_taula " +
+                                "from comandes c inner join taules t on c.id_taula = t.id_taula " +
                                 "where c.finalitzada = true order by dia"
                 );
                 while (rs.next()) {
@@ -92,7 +92,7 @@ public class VisualitzarComandesController implements Initializable{
             try {
                 rs = con.queryDB(
                         "select c.id_comanda as id_comanda, c.dia as dia, c.finalitzada as finalitzada, t.nom as nom_taula " +
-                                "from comanda c inner join taula t on c.id_taula = t.id_taula " +
+                                "from comandes c inner join taules t on c.id_taula = t.id_taula " +
                                 "where c.finalitzada = false order by dia"
                 );
                 while (rs.next()) {
