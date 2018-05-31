@@ -42,7 +42,7 @@ public class BorrarBegudesController implements Initializable{
         System.out.println("Buscant a la base de dades...");
         try {
             rs = con.queryDB(
-                    "select * from begudes order by nom"
+                    "select * from begudes WHERE NOT id_beguda IN ( SELECT id_beguda FROM comandabeguda )"
             );
             while (rs.next()) {
                 id = rs.getInt("id_beguda");

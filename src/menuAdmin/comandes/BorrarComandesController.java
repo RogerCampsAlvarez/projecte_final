@@ -44,7 +44,6 @@ public class BorrarComandesController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         omplirLlistaComandes();
-        apDades.setVisible( false );
         listComanda_borrar.setOnMouseClicked(new EventHandler<MouseEvent>() {
 
             @Override
@@ -79,6 +78,9 @@ public class BorrarComandesController implements Initializable {
     }
 
     private void omplirLlistaComandes() {
+        apDades.setVisible( false );
+        obsListComandes.clear();
+
         String sQuery = "SELECT id_comanda FROM comanda";
 
         try {
@@ -104,12 +106,14 @@ public class BorrarComandesController implements Initializable {
         String sQuery2 = "DELETE FROM comanda WHERE id_comanda = " + strComandaSeleccionada + ";";
 
         try {
-            con.queryDB( sQuery );
-            con.queryDB( sQuery1 );
-            con.queryDB( sQuery2 );
+            con.execDB( sQuery );
+            con.execDB( sQuery1 );
+            con.execDB( sQuery2 );
         } catch ( Exception e ) {
             e.printStackTrace();
         }
+
+        omplirLlistaComandes();
 
     }
 }

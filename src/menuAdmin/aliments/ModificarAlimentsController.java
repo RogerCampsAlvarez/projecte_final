@@ -55,9 +55,9 @@ public class ModificarAlimentsController implements Initializable{
 
     @FXML
     private void clickItem(MouseEvent event) {
-        tbNom.setText(taula_begudes.getSelectionModel().getSelectedItem().getNom());
-        tbPreu.setText(taula_begudes.getSelectionModel().getSelectedItem().getPreu());
-        cbTipus.setValue(taula_begudes.getSelectionModel().getSelectedItem().getTipus());
+        tbNom.setText(taulaPlats_borrar.getSelectionModel().getSelectedItem().getNom());
+        tbPreu.setText(taulaPlats_borrar.getSelectionModel().getSelectedItem().getPreu());
+        cbTipus.setValue(taulaPlats_borrar.getSelectionModel().getSelectedItem().getTipus());
     }
 
 
@@ -89,22 +89,22 @@ public class ModificarAlimentsController implements Initializable{
 
     private void pujarATableview(int idBeguda, String nomBeguda, String preuBeguda, String tipusBeguda) {
         llistaBegudes.add(new Beguda(idBeguda, nomBeguda, preuBeguda, tipusBeguda));
-        taula_begudes.setItems(llistaBegudes);
+        taulaPlats_borrar.setItems(llistaBegudes);
     }
 
     private void borrarTableView(){
         llistaBegudes.clear();
-        taula_begudes.setItems(llistaBegudes);
+        taulaPlats_borrar.setItems(llistaBegudes);
     }
 
     @FXML
     public void cmdGuardar() throws SQLException {
-        if (!taula_begudes.getSelectionModel().isEmpty()) {
+        if (!taulaPlats_borrar.getSelectionModel().isEmpty()) {
 
             String nom = tbNom.getText();
             String preu = tbPreu.getText();
             String tipus = cbTipus.getSelectionModel().getSelectedItem().toString();
-            int id_antic = taula_begudes.getSelectionModel().getSelectedItem().getId();
+            int id_antic = taulaPlats_borrar.getSelectionModel().getSelectedItem().getId();
             int cont = 0;
             System.out.println(nom + "\n" + preu + "\n" + tipus + "\n" + id_antic);
 
