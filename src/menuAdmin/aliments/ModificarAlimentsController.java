@@ -1,5 +1,7 @@
 package menuAdmin.aliments;
 
+import combos.Categoria;
+import combos.Ordre;
 import combos.Tipus;
 import inici.ConnexioBD;
 import javafx.collections.FXCollections;
@@ -8,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import objectes.Aliments;
 import objectes.Beguda;
 
 import java.net.URL;
@@ -23,30 +26,20 @@ public class ModificarAlimentsController implements Initializable{
     @FXML
     TextField tbPreu;
     @FXML
-    TextField taDescripcio;
-    @FXML
-    Button bBuscarImg;
+    TextArea taDescripcioo;
     @FXML
     ComboBox cbOrdre;
     @FXML
-    ComboBox cbCategoria;
-
-
-    //S'HAURA DE BORRAR
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
-
-
-    /*
-    //FALTA FER A PARTIR DE AQUI
+    ComboBox cbCategoriaa;
+    @FXML
+    TableView<Aliments> taula_aliments;
 
 
 
-    Tipus t = new Tipus();
-    List<Beguda> llista = new ArrayList<Beguda>();
-    ObservableList<Beguda> llistaBegudes = FXCollections.observableList(llista);
+    Ordre o = new Ordre();
+    Categoria c = new Categoria();
+    List<Aliments> llista = new ArrayList<Aliments>();
+    ObservableList<Aliments> llistaAliments = FXCollections.observableList(llista);
     ConnexioBD con = new ConnexioBD();
     Alert alerterror = new Alert(Alert.AlertType.ERROR);
     Alert alertconfirm = new Alert(Alert.AlertType.CONFIRMATION);
@@ -55,30 +48,36 @@ public class ModificarAlimentsController implements Initializable{
 
     @FXML
     private void clickItem(MouseEvent event) {
-        tbNom.setText(taulaPlats_borrar.getSelectionModel().getSelectedItem().getNom());
-        tbPreu.setText(taulaPlats_borrar.getSelectionModel().getSelectedItem().getPreu());
-        cbTipus.setValue(taulaPlats_borrar.getSelectionModel().getSelectedItem().getTipus());
+        tbNom.setText(taula_aliments.getSelectionModel().getSelectedItem().getNom());
+        tbPreu.setText(taula_aliments.getSelectionModel().getSelectedItem().getPreu());
+        taDescripcioo.setText(taula_aliments.getSelectionModel().getSelectedItem().getDescripcio());
+        cbOrdre.setValue(taula_aliments.getSelectionModel().getSelectedItem().getOrdre());
+        cbCategoriaa.setValue(taula_aliments.getSelectionModel().getSelectedItem().getCategoria());
     }
 
 
     private void buscarBD() throws ClassNotFoundException, SQLException {
         int id;
         String nom;
-        Double preu;
-        String tipus;
+        String preu;
+        String descripcio;
+        String ordre;
+        String categoria;
 
         System.out.println("Buscant a la base de dades...");
         try {
             rs = con.queryDB(
-                    "select * from begudes order by nom"
+                    "select * from aliments order by nom"
             );
             while (rs.next()) {
-                id = rs.getInt("id_beguda");
+                id = rs.getInt("id_aliment");
                 nom = rs.getString("nom");
-                preu = rs.getDouble("preu");
-                tipus = rs.getString("tipus");
+                preu = rs.getString("preu");
+                descripcio = rs.getString("descripcio");
+                ordre = rs.getString("ordre");
+                categoria = rs.getString("categoria");
 
-                pujarATableview(id, nom, preu.toString(), tipus);
+                pujarATableview(id, nom, descripcio, preu, ordre, categoria);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -87,29 +86,30 @@ public class ModificarAlimentsController implements Initializable{
     }
 
 
-    private void pujarATableview(int idBeguda, String nomBeguda, String preuBeguda, String tipusBeguda) {
-        llistaBegudes.add(new Beguda(idBeguda, nomBeguda, preuBeguda, tipusBeguda));
-        taulaPlats_borrar.setItems(llistaBegudes);
+    private void pujarATableview(int idAliment, String nomAliment, String descripcioAliment, String preuAliment, String ordreAliment, String categoriaAliment) {
+        llistaAliments.add(new Aliments(idAliment, nomAliment, descripcioAliment, preuAliment, ordreAliment, categoriaAliment));
+        taula_aliments.setItems(llistaAliments);
     }
 
     private void borrarTableView(){
-        llistaBegudes.clear();
-        taulaPlats_borrar.setItems(llistaBegudes);
+        llistaAliments.clear();
+        taula_aliments.setItems(llistaAliments);
     }
 
     @FXML
     public void cmdGuardar() throws SQLException {
-        if (!taulaPlats_borrar.getSelectionModel().isEmpty()) {
+        if (!taula_aliments.getSelectionModel().isEmpty()) {
 
             String nom = tbNom.getText();
             String preu = tbPreu.getText();
-            String tipus = cbTipus.getSelectionModel().getSelectedItem().toString();
-            int id_antic = taulaPlats_borrar.getSelectionModel().getSelectedItem().getId();
+            String descripcio = taDescripcioo.getText();
+            String ordre = cbOrdre.getSelectionModel().getSelectedItem().toString();
+            String categoria = cbCategoriaa.getSelectionModel().getSelectedItem().toString();
+            int id_antic = taula_aliments.getSelectionModel().getSelectedItem().getId();
             int cont = 0;
-            System.out.println(nom + "\n" + preu + "\n" + tipus + "\n" + id_antic);
 
 
-            rs = con.queryDB("select nom from begudes");
+            rs = con.queryDB("select nom from aliments where id_aliment != " + id_antic + ";");
 
             while (rs.next()) {
                 if (rs.getString("nom").equals(nom)) {
@@ -120,10 +120,10 @@ public class ModificarAlimentsController implements Initializable{
             //si el nom a entrar no està repetit
             if (cont == 0) {
                 //si cap valor esta buit
-                if (!tbNom.equals("") || !tbPreu.equals("") || !cbTipus.getSelectionModel().isEmpty()) {
-                    con.execDB("update begudes set nom = '" + nom + "', preu = " + preu + ", tipus = '" + tipus + "'  where id_beguda = " + id_antic + ";");
+                if (!tbNom.equals("") || !tbPreu.equals("") || taDescripcioo.equals("") || !cbOrdre.getSelectionModel().isEmpty() || !cbCategoriaa.getSelectionModel().isEmpty()) {
+                    con.execDB("update aliments set nom = '" + nom + "', descripcio = '" + descripcio + "', preu = " + preu + ", ordre = '" + ordre + "', categoria = '" + categoria + "'  where id_aliment = " + id_antic + ";");
                     alertconfirm.setTitle("Guardat");
-                    alertconfirm.setHeaderText("Beguda modificada amb exit!");
+                    alertconfirm.setHeaderText("Aliment modificada amb exit!");
                     alertconfirm.show();
                     borrarTableView();
                     borrarCampsFormulari();
@@ -153,7 +153,9 @@ public class ModificarAlimentsController implements Initializable{
     private void borrarCampsFormulari(){
         tbNom.setText("");
         tbPreu.setText("");
-        cbTipus.setValue(null);
+        taDescripcioo.setText("");
+        cbOrdre.setValue(null);
+        cbCategoriaa.setValue(null);
     }
 
 
@@ -167,9 +169,12 @@ public class ModificarAlimentsController implements Initializable{
             e.printStackTrace();
         }
 
-        ObservableList<String> tipus =
-                FXCollections.observableArrayList(t.getTipus());
-        cbTipus.getItems().addAll(tipus);
+        ObservableList<String> ordre =
+                FXCollections.observableArrayList(o.getOrdre());
+        cbOrdre.getItems().addAll(ordre);
+
+        ObservableList<String> categoria =
+                FXCollections.observableArrayList(c.getCategoria());
+        cbOrdre.getItems().addAll(categoria);
     }
-    */
 }
