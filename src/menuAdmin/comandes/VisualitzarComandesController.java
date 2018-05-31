@@ -27,12 +27,10 @@ public class VisualitzarComandesController implements Initializable{
     ComboBox cbEstat;
     @FXML
     TableView taula_comandes;
-    /*
     @FXML
     TableView taula_aliments;
     @FXML
     TableView taula_begudes;
-    */
 
     Estat e = new Estat();
     List<Comanda> llista_comandes = new ArrayList<Comanda>();
