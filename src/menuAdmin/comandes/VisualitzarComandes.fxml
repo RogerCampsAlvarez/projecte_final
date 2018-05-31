@@ -3,14 +3,13 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menuAdmin.comandes.VisualitzarComandesController">
@@ -19,18 +18,13 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <ComboBox fx:id="cbEstat" prefHeight="35.0" prefWidth="127.0" />
-                  <Button fx:id="bBuscar" defaultButton="true" layoutX="127.0" mnemonicParsing="false" onAction="#cmdBuscarEstat" prefHeight="35.0" prefWidth="57.0" text="Buscar" />
-                  <TableView fx:id="taula_comandes" layoutY="35.0" prefHeight="364.0" prefWidth="184.0">
-                    <columns>
-                      <TableColumn prefWidth="92.0" text="ID">
-                          <cellValueFactory><PropertyValueFactory property="id_comanda" /></cellValueFactory>
-                      </TableColumn>
-                      <TableColumn prefWidth="91.0" text="TAULA">
-                          <cellValueFactory><PropertyValueFactory property="nom_taula" /></cellValueFactory>
-                      </TableColumn>
-                    </columns>
-                  </TableView>
+                  <VBox prefHeight="400.0" prefWidth="185.0">
+                     <children>
+                        <ComboBox fx:id="cbEstat" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="127.0" />
+                        <Button fx:id="bBuscar" defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cmdBuscarEstat" prefHeight="35.0" prefWidth="57.0" text="Buscar" />
+                        <ListView fx:id="listComandes" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="330.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
@@ -78,20 +72,12 @@
                                 <items>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                        <children>
-                                          <TableView fx:id="taula_aliments" prefHeight="296.0" prefWidth="123.0">
-                                            <columns>
-                                              <TableColumn prefWidth="122.0" text="ALIMENTS" />
-                                            </columns>
-                                          </TableView>
+                                          <ListView fx:id="listAliment" prefHeight="300.0" prefWidth="120.0" />
                                        </children>
                                     </AnchorPane>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                        <children>
-                                          <TableView fx:id="taula_begudes" prefHeight="298.0" prefWidth="126.0">
-                                            <columns>
-                                              <TableColumn prefWidth="125.0" text="BEGUDES" />
-                                            </columns>
-                                          </TableView>
+                                          <ListView fx:id="listBeguda" prefHeight="300.0" prefWidth="130.0" />
                                        </children>
                                     </AnchorPane>
                                 </items>
