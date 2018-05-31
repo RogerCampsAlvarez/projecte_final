@@ -19,7 +19,7 @@ public class ConnexioBD {
 		try {
 			Class.forName("org.postgresql.Driver");
 			//con = DriverManager.getConnection("jdbc:postgresql://144.217.11.3/luxyrestaurant", "luxy", "LuxyRestaurant");
-			con = DriverManager.getConnection("jdbc:postgresql://localhost/LuxyRestaurant", "postgres", "postgres");
+			con = DriverManager.getConnection("jdbc:postgresql://192.168.1.149/LuxyRestaurant", "postgres", "postgres");
 		} catch (Exception e) {
 			e.getStackTrace();
 		}		

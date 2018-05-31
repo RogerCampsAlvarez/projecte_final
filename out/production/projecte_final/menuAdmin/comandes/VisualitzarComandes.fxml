@@ -89,7 +89,7 @@
                                        <children>
                                           <TableView fx:id="taula_begudes" prefHeight="298.0" prefWidth="126.0">
                                             <columns>
-                                              <TableColumn fx:id="taula_begudes" prefWidth="125.0" text="BEGUDES" />
+                                              <TableColumn prefWidth="125.0" text="BEGUDES" />
                                             </columns>
                                           </TableView>
                                        </children>

@@ -1,7 +1,7 @@
 package combos;
 
 public class Tipus {
-    String[] tipus_beguda = {"Refresc", "Cervesa", "Alcohol", "Vi", "Licor", "Cafe"};
+    String[] tipus_beguda = {"Beguda", "Cafe"};
 
     public Tipus(){}
 
