@@ -1,7 +1,7 @@
 package combos;
 
 public class Categoria {
-    String[] categoria_aliments = {"Carn", "Peix", "Pasta", "Sopa", "Postre", "Verdura", "Amanida"};
+    String[] categoria_aliments = {"Carn", "Peix", "Pasta", "Sopa", "Verdura", "Amanida", "Postres"};
 
     public Categoria(){}
 

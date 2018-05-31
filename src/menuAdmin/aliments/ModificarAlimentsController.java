@@ -175,6 +175,6 @@ public class ModificarAlimentsController implements Initializable{
 
         ObservableList<String> categoria =
                 FXCollections.observableArrayList(c.getCategoria());
-        cbOrdre.getItems().addAll(categoria);
+        cbCategoriaa.getItems().addAll(categoria);
     }
 }
