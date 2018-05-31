@@ -4,7 +4,7 @@ package combos;
  * Classe per obtenir els camps del combos del ordre dels plats
  */
 public class Ordre {
-    String[] ordre_aliments = {"Primer", "Segon", "Postre"};
+    String[] ordre_aliments = {"Primer", "Segon", "Postres"};
 
     public Ordre(){}
 
