@@ -17,6 +17,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * Controlador de la pantalla de borrat dels aliments
+ *
+ */
 public class BorrarAlimentsController implements Initializable {
     @FXML
     ListView<String> listPlats_borrar;
@@ -30,6 +34,10 @@ public class BorrarAlimentsController implements Initializable {
 
     ConnexioBD con = new ConnexioBD();
 
+
+    /**
+     * Ompla la llista dels plats a la list view
+     */
     private void omplirLlistPlats() {
         bEliminarPlat.setVisible( false );
         obsListPlat.clear();
@@ -51,6 +59,10 @@ public class BorrarAlimentsController implements Initializable {
     }
 
     @FXML
+    /**
+     * Borra el aliment seleccionat
+     *
+     */
     public void cmdBorrar(){
 
         String sQuery = "DELETE FROM aliments WHERE nom = '" + strPlatSeleccionat + "';";
@@ -66,6 +78,10 @@ public class BorrarAlimentsController implements Initializable {
     }
 
     @FXML
+    /**
+     * S'executa al clickar al botó d'actualitzar
+     *
+     */
     public void onClickActualitzar(ActionEvent actionEvent ) {
         omplirLlistPlats();
     }

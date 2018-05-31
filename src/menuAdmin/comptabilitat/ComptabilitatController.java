@@ -20,6 +20,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * Controlador de la pantalla de comptabilitat
+ *
+ */
 public class ComptabilitatController implements Initializable {
 
     @FXML
@@ -36,6 +40,9 @@ public class ComptabilitatController implements Initializable {
     ConnexioBD con = new ConnexioBD();
 
     @FXML
+    /**
+     * Calcula la caixa
+     */
     private void cmdCalcularCaixa( ActionEvent actionEvent ) {
         obsListCaixa.clear();
         Date todaysDate = new Date();
@@ -69,6 +76,9 @@ public class ComptabilitatController implements Initializable {
     }
 
     @FXML
+    /**
+     * Calcular caixa del dia seleccionat
+     */
     private void cmdCalcularCaixaDia( ActionEvent actionEvent ) {
         obsListCaixa.clear();
         String dia = calendariCaixa.getValue().toString();

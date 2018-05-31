@@ -13,6 +13,10 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
+/**
+ * Controlador del about
+ *
+ */
 public class AboutController {
 	@FXML
 	Button btnCloseAbout;
@@ -21,11 +25,18 @@ public class AboutController {
 	Label noms;
 
 	@FXML
+	/**
+	 * Tenca la finestra del about
+	 */
 	void cmdCloseAbout(ActionEvent event) {
 		Stage stage = (Stage) btnCloseAbout.getScene().getWindow();
 		stage.close();
 	}
-	
+
+	/**
+	 * Mostra la finestra del about
+	 * @param aboutStage
+	 */
 	public void initialize(Stage aboutStage) {
 		try {
 			Parent parent = FXMLLoader.load(getClass().getResource("About.fxml"));

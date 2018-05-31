@@ -50,16 +50,25 @@ public class BarraController {
     }
 
     @FXML
+    /**
+     * S'activa al clickar el boto de rebre begudes
+     */
     private void cmdRebreBegudes(ActionEvent actionEvent) throws ClassNotFoundException, SQLException {
         buscarBD();
     }
 
     @FXML
+    /**
+     * S'activa al clickar el boto de completar begudes
+     */
     private void completarBeguda(ActionEvent actionEvent) {
         taula_begudes.getItems().remove(taula_begudes.getSelectionModel().getSelectedItem());
     }
 
     @FXML
+    /**
+     * Mostra les dades del item clickat
+     */
     private void clickItem(MouseEvent event) {
         Lnom.setText(taula_begudes.getSelectionModel().getSelectedItem().getNom());
         Ltaula.setText(taula_begudes.getSelectionModel().getSelectedItem().getTaula());
@@ -68,7 +77,11 @@ public class BarraController {
         System.out.println("hola");
     }
 
-
+    /**
+     * Busca les dades a la base de dades
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     private void buscarBD() throws ClassNotFoundException, SQLException {
         String taula = "";
         String beguda = "";
@@ -104,14 +117,25 @@ public class BarraController {
         System.out.println("Ha acavat de buscar a la base de dades");
     }
 
-
+    /**
+     * Puja l'objecte a la table view
+     * @param id
+     * @param taula
+     * @param beguda
+     * @param tipus
+     * @param Dhora
+     */
     private void pujarATableview(int id, String taula, String beguda, String tipus, Date Dhora) {
         String time = modificarHora(Dhora);
         llistaBegudes.add(new Beguda(id, beguda, taula, tipus, time));
         taula_begudes.setItems(llistaBegudes);
     }
 
-
+    /**
+     * Modifica la hora per mostrar-la be
+     * @param Dhora
+     * @return
+     */
     private String modificarHora(Date Dhora) {
         String hora = Integer.toString(Dhora.getHours());
         String minuts;
@@ -129,7 +153,9 @@ public class BarraController {
         return time;
     }
 
-
+    /**
+     * Canvia l'estat de la comandbeguda
+     */
     void cmdBorrar(){
         int id = taula_begudes.getSelectionModel().getSelectedItem().getId();
         con.execDB("update comandabeguda set estat = 'finalitzat' where id = " + id + ";");

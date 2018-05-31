@@ -16,6 +16,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Menu de les opcions del adrministrador
+ *
+ */
 public class MenuAdministracioController implements Initializable{
     Pane root;
     Scene scene;
@@ -67,6 +71,9 @@ public class MenuAdministracioController implements Initializable{
 
 
     @FXML
+    /**
+     * Obra la pestanya de registrar usuari en la escena
+     */
     void cmdRegistrarUsuari(ActionEvent event){
         try {
             root = FXMLLoader.load(getClass().getResource("/inici/Registre.fxml"));
@@ -79,6 +86,9 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+    /**
+     * Obra la pestanya de gestionar comandes en el anchor pane i mostra i oculta els botons pertinents
+     */
     void cmdGestionarComandes(ActionEvent event) {
         visibilitatBotonsComandes(true);
         visibilitatBotonsAliments(false);
@@ -95,6 +105,9 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+    /**
+     * Obra la pestanya de gestionar taules en el anchor pane i mostra i oculta els botons pertinents
+     */
     void cmdGestionarTaules(ActionEvent event) {
         visibilitatBotonsComandes(false);
         visibilitatBotonsAliments(false);
@@ -107,6 +120,9 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+    /**
+     * Obra la pestanya de gestionar aliments en el anchor pane i mostra i oculta els botons pertinents
+     */
     void cmdGestionarAliments(ActionEvent event) {
         visibilitatBotonsComandes(false);
         visibilitatBotonsAliments(true);
@@ -119,6 +135,9 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+    /**
+     * Obra la pestanya de gestionar begudes en el anchor pane i mostra i oculta els botons pertinents
+     */
     void cmdGestionarBegudes(ActionEvent event) {
         visibilitatBotonsComandes(false);
         visibilitatBotonsAliments(false);
@@ -131,6 +150,9 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+    /**
+     * Obra la pestanya de gestionar comptabilitat en el anchor pane i mostra i oculta els botons pertinents
+     */
     void cmdComptabilitat(ActionEvent event) {
         visibilitatBotonsComandes(false);
         visibilitatBotonsAliments(false);
@@ -150,6 +172,9 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+    /**
+     * Desconecta la sessió de l'usuari i et porta a la pestanya de login
+     */
     void cmdDesconectar(ActionEvent event) {
         try {
             root = FXMLLoader.load(getClass().getResource("/inici/Login.fxml"));
@@ -161,23 +186,39 @@ public class MenuAdministracioController implements Initializable{
         }
     }
 
+    /**
+     * Mostra o amaga els botons de comandes
+     * @param estat
+     */
     void visibilitatBotonsComandes(boolean estat){
         bVisualitzarComandes.setVisible(estat);
         bBorrarComandes.setVisible(estat);
     }
 
+    /**
+     * Mostra o amaga els botons de taules
+     * @param estat
+     */
     void visibilitatBotonsTaules(boolean estat){
         bCrearTaules.setVisible(estat);
         bModificarTaules.setVisible(estat);
         bBorrarTaules.setVisible(estat);
     }
 
+    /**
+     * Mostra o amaga els botons de aliments
+     * @param estat
+     */
     void visibilitatBotonsAliments(boolean estat){
         bCrearAliments.setVisible(estat);
         bModificarAliments.setVisible(estat);
         bBorrarAliments.setVisible(estat);
     }
 
+    /**
+     * Mostra o amaga els botons de begudes
+     * @param estat
+     */
     void visibilitatBotonsBegudes(boolean estat){
         bCrearBegudes.setVisible(estat);
         bModificarBegudes.setVisible(estat);
@@ -194,6 +235,10 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+    /**
+     * Obra en el mateix anchor pane la penstanya de crear aliments
+     *
+     */
     public void cmdCrearAliments(ActionEvent event){
         try {
             anchorPane1.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/menuAdmin/aliments/CrearAliments.fxml")));
@@ -204,6 +249,10 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+    /**
+     * Obra en el mateix anchor pane la penstanya de modificar aliments
+     *
+     */
     public void cmdModificarAliments(ActionEvent event){
         try {
             anchorPane1.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/menuAdmin/aliments/ModificarAliments.fxml")));
@@ -214,6 +263,10 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+    /**
+     * Obra en el mateix anchor pane la penstanya de borrar aliments
+     *
+     */
     public void cmdBorrarAliments(ActionEvent event){
         try {
             anchorPane1.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/menuAdmin/aliments/BorrarAliments.fxml")));
@@ -224,6 +277,10 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+    /**
+     * Obra en el mateix anchor pane la penstanya de crear begudes
+     *
+     */
     public void cmdCrearBegudes(ActionEvent event){
         try {
             anchorPane1.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/menuAdmin/begudes/CrearBegudes.fxml")));
@@ -234,6 +291,11 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+
+    /**
+     * Obra en el mateix anchor pane la penstanya de modificar begudes
+     *
+     */
     public void cmdModificarBegudes(ActionEvent event){
         try {
             anchorPane1.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/menuAdmin/begudes/ModificarBegudes.fxml")));
@@ -244,6 +306,10 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+    /**
+     * Obra en el mateix anchor pane la penstanya de borrar begudes
+     *
+     */
     public void cmdBorrarBegudes(ActionEvent event){
         try {
             anchorPane1.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/menuAdmin/begudes/BorrarBegudes.fxml")));
@@ -254,6 +320,10 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+    /**
+     * Obra en el mateix anchor pane la penstanya de visualitzar comandes
+     *
+     */
     public void cmdVisualitzarComandes(ActionEvent event){
         try {
             anchorPane1.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/menuAdmin/comandes/VisualitzarComandes.fxml")));
@@ -264,6 +334,10 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+    /**
+     * Obra en el mateix anchor pane la penstanya de borrar comandes
+     *
+     */
     public void cmdBorrarComandes(ActionEvent event){
         try {
             anchorPane1.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/menuAdmin/comandes/BorrarComandes.fxml")));
@@ -274,6 +348,10 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+    /**
+     * Obra en el mateix anchor pane la penstanya de crear taules
+     *
+     */
     public void cmdCrearTaules(ActionEvent event){
         try {
             anchorPane1.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/menuAdmin/taules/CrearTaules.fxml")));
@@ -284,6 +362,10 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+    /**
+     * Obra en el mateix anchor pane la penstanya de modificar taules
+     *
+     */
     public void cmdModificarTaules(ActionEvent event){
         try {
             anchorPane1.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/menuAdmin/taules/ModificarTaules.fxml")));
@@ -294,6 +376,10 @@ public class MenuAdministracioController implements Initializable{
     }
 
     @FXML
+    /**
+     * Obra en el mateix anchor pane la penstanya de borrar taules
+     *
+     */
     public void cmdBorrarTaules(ActionEvent event){
         try {
             anchorPane1.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("/menuAdmin/taules/BorrarTaules.fxml")));
@@ -303,6 +389,9 @@ public class MenuAdministracioController implements Initializable{
         var++;
     }
 
+    /**
+     * Buida tot el contingut del anchor pane per poder fer que el anchor pane quedi en blanc
+     */
     void recarregarEscena(){
         try {
             root = FXMLLoader.load(getClass().getResource("/administracio/MenuAdministracio.fxml"));

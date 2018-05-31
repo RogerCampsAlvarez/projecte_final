@@ -19,6 +19,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * Controlador de la pantalla de borrat de les comandes
+ *
+ */
 public class BorrarComandesController implements Initializable {
 
     @FXML
@@ -56,6 +60,9 @@ public class BorrarComandesController implements Initializable {
         });
     }
 
+    /**
+     * Mostra totes les dades de una comanda
+     */
     private void mostrarDadesComanda() {
 
         tfIdComanda.setText( strComandaSeleccionada );
@@ -77,6 +84,9 @@ public class BorrarComandesController implements Initializable {
         }
     }
 
+    /**
+     * Ompla la llista de comandes
+     */
     private void omplirLlistaComandes() {
         apDades.setVisible( false );
         obsListComandes.clear();
@@ -99,6 +109,9 @@ public class BorrarComandesController implements Initializable {
     }
 
     @FXML
+    /**
+     * Borra tots els registres amb el id de la comanda a borrar
+     */
     private void onClickBorrar( ActionEvent actionEvent ) {
 
         String sQuery = "DELETE FROM comandabeguda WHERE id_comanda = " + strComandaSeleccionada + ";";

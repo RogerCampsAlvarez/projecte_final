@@ -17,6 +17,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * Controlador de la pantalla de borrat de les taules
+ *
+ */
 public class BorrarTaulesController implements Initializable{
     @FXML
     TableView<Taula> taula_taules;
@@ -31,7 +35,11 @@ public class BorrarTaulesController implements Initializable{
     String nom_taula;
     int count = 0;
 
-
+    /**
+     * Busca les dades a la base de dades
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     private void buscarBD() throws ClassNotFoundException, SQLException {
         int id;
         String nom;
@@ -52,18 +60,28 @@ public class BorrarTaulesController implements Initializable{
         System.out.println("Ha acavat de buscar a la base de dades");
     }
 
-
+    /**
+     * Puja l'item a la table view
+     * @param idTaula
+     * @param nomTaula
+     */
     private void pujarATableview(int idTaula, String nomTaula) {
         llistaTaules.add(new Taula(idTaula, nomTaula));
         taula_taules.setItems(llistaTaules);
     }
 
+    /**
+     * Borra tots els items de la table view
+     */
     private void borrarTableView(){
         llistaTaules.clear();
         taula_taules.setItems(llistaTaules);
     }
 
     @FXML
+    /**
+     * Borra l'item seleccionat
+     */
     public void cmdBorrar(){
         //si no s'ha seleccionat res
         if (!taula_taules.getSelectionModel().isEmpty()){
@@ -93,6 +111,9 @@ public class BorrarTaulesController implements Initializable{
     }
 
     @FXML
+    /**
+     * Recupera l'ultim item borrat
+     */
     public void cmdRecuperarUltim(){
         //encara no s'ha recuperat l'última taula borrada
         if (count == 1){

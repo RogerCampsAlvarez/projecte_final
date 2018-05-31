@@ -8,7 +8,10 @@ import javafx.scene.control.TextField;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
+/**
+ * Controlador de la pantalla de creació de les taules
+ *
+ */
 public class CrearTaulesController {
     @FXML
     TextField tbNom;
@@ -22,6 +25,9 @@ public class CrearTaulesController {
 
 
     @FXML
+    /**
+     * Guarda les dades del formulari a la base de dades
+     */
     public void cmdGuardar() throws SQLException {
         nom = tbNom.getText();
         rs = con.queryDB("select nom from taula");

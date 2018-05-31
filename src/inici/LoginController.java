@@ -19,6 +19,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+/**
+ * Pantalla de logueig
+ *
+ */
 public class LoginController implements Initializable{
 	ResultSet rs;
 	ConnexioBD con;
@@ -37,6 +41,10 @@ public class LoginController implements Initializable{
 
 
 	@FXML
+	/**
+	 * Inicia sessió del usuari entrat
+	 *
+	 */
 	void cmdContinuar(ActionEvent event){
 		int cont = 0;
 
@@ -80,21 +88,6 @@ public class LoginController implements Initializable{
 		}
 	}
 
-	/*
-	public void initialize(Stage primaryStage) {
-		System.out.println("initialize");
-
-		try {
-			Parent parent = FXMLLoader.load(getClass().getResource("Login.fxml"));
-			primaryStage.setTitle("LuxyRestaurant");
-			primaryStage.setScene(new Scene(parent));
-			primaryStage.show();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-	*/
-
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		con = new ConnexioBD();
@@ -103,6 +96,9 @@ public class LoginController implements Initializable{
 	}
 
 	@FXML
+	/**
+	 * Tenca l'aplicació
+	 */
 	private void cmdExit(){
 		System.exit(0);
 	}

@@ -16,6 +16,10 @@ import javafx.util.Duration;
 import java.io.IOException;
 import java.sql.ResultSet;
 
+/**
+ * Controlador de la pantalla del spalsh
+ *
+ */
 public class SplashController {
 
 	Stage splashStage;
@@ -25,6 +29,10 @@ public class SplashController {
 	
 	static final int SPLASH_FADE_TIME = 400;
 
+	/**
+	 * Mostra la pantalla splash
+	 * @param primaryStage
+	 */
 	public void initialize(Stage primaryStage) {
 		con = new ConnexioBD();
 
@@ -49,7 +57,7 @@ public class SplashController {
 	}
 
 	/**
-	 * MOSTRAR / AMAGAR SLPASHSCREEN
+	 * MOSTRAR / AMAGAR SLPASHSCREEN i decideix depenent si hi han usuaris o no portar-te a la pantalla de registre o a la pantalla de login
 	 */
 	private void loadSplashScreen() {
 		try {

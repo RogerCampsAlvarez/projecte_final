@@ -48,11 +48,17 @@ public class CuinaController {
     }
 
     @FXML
+    /**
+     * S'activa al clickar el boto de rebre plats
+     */
     private void cmdRebrePlats(ActionEvent actionEvent) throws ClassNotFoundException, SQLException {
         buscarBD();
     }
 
     @FXML
+    /**
+     * S'activa al clickar el boto de completar plat
+     */
     private void completarPlat(ActionEvent actionEvent) {
         int id = taula_aliments.getSelectionModel().getSelectedItem().getId();
         con.execDB("update comandaaliment set estat = 'finalitzat' where id = " + id + ";");
@@ -60,6 +66,9 @@ public class CuinaController {
     }
 
     @FXML
+    /**
+     * Mostra en el formulari les dades del item clickat
+     */
     private void clickItem(MouseEvent event) {
         Lnom.setText(taula_aliments.getSelectionModel().getSelectedItem().getNom());
         Ltaula.setText(taula_aliments.getSelectionModel().getSelectedItem().getTaula());
@@ -69,7 +78,11 @@ public class CuinaController {
         System.out.println("hola");
     }
 
-
+    /**
+     * Busca a la base de dades les dades necessaries
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     private void buscarBD() throws ClassNotFoundException, SQLException {
         String taula = "";
         String aliment = "";
@@ -107,14 +120,26 @@ public class CuinaController {
         System.out.println("Ha acavat de buscar a la base de dades");
     }
 
-
+    /**
+     * Puja un objecta a la table view
+     * @param id
+     * @param taula
+     * @param aliment
+     * @param categoria
+     * @param ordre
+     * @param Dhora
+     */
     private void pujarATableview(int id, String taula, String aliment, String categoria, String ordre, Date Dhora) {
         String time = modificarHora(Dhora);
         llistaAliments.add(new Plat(id, aliment, taula, ordre, categoria, time));
         taula_aliments.setItems(llistaAliments);
     }
 
-
+    /**
+     * Modifica l'hora per formatar-la be
+     * @param Dhora
+     * @return
+     */
     private String modificarHora(Date Dhora) {
         String hora = Integer.toString(Dhora.getHours());
         String minuts;

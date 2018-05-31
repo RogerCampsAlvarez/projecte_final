@@ -21,6 +21,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * Controlador de la pantalla de visualització de les comandes
+ *
+ */
 public class VisualitzarComandesController implements Initializable{
     @FXML
     ComboBox cbEstat;
@@ -64,6 +68,12 @@ public class VisualitzarComandesController implements Initializable{
         }
     }
 
+    /**
+     * Busca les comandes depenent si estan finalitzades o no
+     * @param finalitzada
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     private void buscarComandes(boolean finalitzada) throws ClassNotFoundException, SQLException {
         obsListComandes.clear();
 
@@ -107,21 +117,6 @@ public class VisualitzarComandesController implements Initializable{
         }
     }
 
-
-    private void pujarATableviewComandes(String strComanda) {
-        llista_comandes.add( strComanda );
-        listComandes.setItems(obsListComandes);
-    }
-
-    private void borrarTableViews(){
-        //llistaBegudes.clear();
-        //taula_begudes.setItems(llistaBegudes);
-        //llista_comandes.clear();
-        //taula_comandes.setItems(obsListComandes);
-        //llista_aliments.clear();
-        //taula_aliments.setItems(llistaAliments);
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ObservableList<String> estat =
@@ -141,6 +136,9 @@ public class VisualitzarComandesController implements Initializable{
         });
     }
 
+    /**
+     * Mostra les begudes en la llista corresponent
+     */
     private void mostrarBegudes() {
         obsListBeguda.clear();
         System.out.println("Buscant a la base de dades...");
@@ -161,6 +159,9 @@ public class VisualitzarComandesController implements Initializable{
         listBeguda.setItems( obsListBeguda );
     }
 
+    /**
+     * Mostra els aliments en la llista corresponent
+     */
     private void mostrarAliments() {
         obsListAliment.clear();
         System.out.println("Buscant a la base de dades...");
@@ -181,6 +182,9 @@ public class VisualitzarComandesController implements Initializable{
         listAliment.setItems( obsListAliment );
     }
 
+    /**
+     * Mostra dades de la comanda seleccionada
+     */
     private void mostrarDades() {
 
         String sQuery = "SELECT t.nom, c.dia FROM taula AS t, comanda AS c WHERE t.id_taula = c.id_taula AND c.id_comanda =" + strIdComanda;

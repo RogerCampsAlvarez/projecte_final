@@ -15,6 +15,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+/**
+ * Controlador de la pantalla de creació de les begudes
+ *
+ */
 public class CrearBegudesController implements Initializable{
     @FXML
     TextField tbNom;
@@ -88,6 +92,9 @@ public class CrearBegudesController implements Initializable{
         }
     }
 
+    /**
+     * Neteja tot el formulari
+     */
     private void clearFormulari(){
         tbNom.setText("");
         tbPreu.setText("");

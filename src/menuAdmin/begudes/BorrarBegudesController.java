@@ -17,6 +17,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * Controlador de la pantalla de borrat de les begudes
+ *
+ */
 public class BorrarBegudesController implements Initializable{
     @FXML
     TableView<Beguda> taula_begudes;
@@ -33,7 +37,11 @@ public class BorrarBegudesController implements Initializable{
     String tipus_beguda;
     int count = 0;
 
-
+    /**
+     * Busca tots els camps de una select a la base de dades
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     private void buscarBD() throws ClassNotFoundException, SQLException {
         int id;
         String nom;
@@ -58,18 +66,30 @@ public class BorrarBegudesController implements Initializable{
         System.out.println("Ha acavat de buscar a la base de dades");
     }
 
-
+    /**
+     * Puja tots els els camps a la table view
+     * @param idBeguda
+     * @param nomBeguda
+     * @param preuBeguda
+     * @param tipusBeguda
+     */
     private void pujarATableview(int idBeguda, String nomBeguda, Double preuBeguda, String tipusBeguda) {
         llistaBegudes.add(new Beguda(idBeguda, nomBeguda, preuBeguda.toString(), tipusBeguda));
         taula_begudes.setItems(llistaBegudes);
     }
 
+    /**
+     * Borra tots els elements de la table view
+     */
     private void borrarTableView(){
         llistaBegudes.clear();
         taula_begudes.setItems(llistaBegudes);
     }
 
     @FXML
+    /**
+     * Borra el item seleccionat
+     */
     public void cmdBorrar(){
         //si no s'ha seleccionat res
         if (!taula_begudes.getSelectionModel().isEmpty()){
@@ -101,6 +121,9 @@ public class BorrarBegudesController implements Initializable{
     }
 
     @FXML
+    /**
+     * Recupera ultim objecte borrat i el inserta a la base de dades
+     */
     public void cmdRecuperarUltim(){
         //encara no s'ha recuperat l'última taula borrada
         if (count == 1){

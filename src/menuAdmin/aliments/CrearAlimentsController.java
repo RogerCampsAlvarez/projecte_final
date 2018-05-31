@@ -22,6 +22,10 @@ import java.sql.SQLException;
 import java.util.Base64;
 import java.util.ResourceBundle;
 
+/**
+ * Controlador de la pantalla de creació dels aliments
+ *
+ */
 public class CrearAlimentsController implements Initializable{
     @FXML
     TextField tbNom;
@@ -56,6 +60,10 @@ public class CrearAlimentsController implements Initializable{
 
 
     @FXML
+    /**
+     * Guarda l'aliment entrat a la base de dades
+     *
+     */
     public void cmdGuardar() throws SQLException {
         nom = tbNom.getText();
         descrpcio = taDescripcio.getText();
@@ -73,7 +81,6 @@ public class CrearAlimentsController implements Initializable{
         //si no hi ha cap nom que es repeteixi amb aquest es guardara a la base de dades
         if (cont == 0){
             //comprova si el preu està ben escrit
-            //if (preu.contains("[0-9]*[.]{1}[0-9]{2}")){
             try{
                 preu = Double.parseDouble(tbPreu.getText());
 
@@ -121,6 +128,10 @@ public class CrearAlimentsController implements Initializable{
         }
     }
 
+    /**
+     * Neteja els camps del formulari
+     *
+     */
     private void clearFormulari(){
         tbNom.setText("");
         tbPreu.setText("");
@@ -130,11 +141,21 @@ public class CrearAlimentsController implements Initializable{
     }
 
     @FXML
+    /**
+     * S'executa al clickar el boto de buscar la imatge
+     *
+     */
     private void cmdBuscarImg(){
         fileImg = fc.showOpenDialog(null);
         imatge = encodeFileToBase64Binary(fileImg);
     }
 
+    /**
+     * Transforma el fitxer a base 64
+     *
+     * @param file
+     * @return
+     */
     private String encodeFileToBase64Binary(File file){
         String encodedfile = null;
         try {

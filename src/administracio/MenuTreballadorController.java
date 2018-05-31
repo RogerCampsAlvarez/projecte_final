@@ -33,11 +33,12 @@ public class MenuTreballadorController implements Initializable{
     @FXML
     private AnchorPane anchorPane1;
 
-    public MenuTreballadorController() throws MalformedURLException {
-    }
-
 
     @FXML
+    /**
+     * Obra en el anchor pane la gestió de la barra
+     *
+     */
     void cmdBarra(ActionEvent event) {
         canviarEstatEsperant();
         try {
@@ -49,6 +50,10 @@ public class MenuTreballadorController implements Initializable{
     }
 
     @FXML
+    /**
+     * Obra en el anchor pane la gestió de la cuina
+     *
+     */
     void cmdCuina(ActionEvent event) {
         canviarEstatEsperant();
         try {
@@ -59,6 +64,10 @@ public class MenuTreballadorController implements Initializable{
     }
 
     @FXML
+    /**
+     * Desconnecta la sessió del usuari i et porta a la pastanya de login
+     *
+     */
     void cmdDesconectar(ActionEvent event) {
         canviarEstatEsperant();
         try {
@@ -76,6 +85,10 @@ public class MenuTreballadorController implements Initializable{
 
     }
 
+    /**
+     * Canvia els plats i les begudes que estiguin en estat agafat en estat esperant
+     *
+     */
     void canviarEstatEsperant(){
         con.execDB("update comandabeguda set estat = 'esperant' where estat = 'agafat'");
         con.execDB("update comandaaliment set estat = 'esperant' where estat = 'agafat'");

@@ -20,6 +20,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * Controlador de la pantalla de modificació de les begudes
+ *
+ */
 public class ModificarBegudesController implements Initializable{
     @FXML
     TextField tbNom;
@@ -40,13 +44,21 @@ public class ModificarBegudesController implements Initializable{
 
 
     @FXML
+    /**
+     * S'executa al clickar un item de la table view
+     *
+     */
     private void clickItem(MouseEvent event) {
         tbNom.setText(taula_begudes.getSelectionModel().getSelectedItem().getNom());
         tbPreu.setText(taula_begudes.getSelectionModel().getSelectedItem().getPreu());
         cbTipus.setValue(taula_begudes.getSelectionModel().getSelectedItem().getTipus());
     }
 
-
+    /**
+     * Busca tots els camps de una select a la base de dades
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     private void buscarBD() throws ClassNotFoundException, SQLException {
         int id;
         String nom;
@@ -72,18 +84,30 @@ public class ModificarBegudesController implements Initializable{
         System.out.println("Ha acavat de buscar a la base de dades");
     }
 
-
+    /**
+     * Puja tots els camps dels parametres a la table view
+     * @param idBeguda
+     * @param nomBeguda
+     * @param preuBeguda
+     * @param tipusBeguda
+     */
     private void pujarATableview(int idBeguda, String nomBeguda, String preuBeguda, String tipusBeguda) {
         llistaBegudes.add(new Beguda(idBeguda, nomBeguda, preuBeguda, tipusBeguda));
         taula_begudes.setItems(llistaBegudes);
     }
 
+    /**
+     * Borra tots els camps de la table view
+     */
     private void borrarTableView(){
         llistaBegudes.clear();
         taula_begudes.setItems(llistaBegudes);
     }
 
     @FXML
+    /**
+     * Guarda, si son correctes, tots els camps del formulari a la base de dades
+     */
     public void cmdGuardar() throws SQLException {
         if (!taula_begudes.getSelectionModel().isEmpty()) {
 
@@ -136,6 +160,10 @@ public class ModificarBegudesController implements Initializable{
         }
     }
 
+    /**
+     * Borra tots els camps del formulari
+     *
+     */
     private void borrarCampsFormulari(){
         tbNom.setText("");
         tbPreu.setText("");
@@ -143,6 +171,9 @@ public class ModificarBegudesController implements Initializable{
     }
 
     @Override
+    /**
+     * Inicialitza l'aplicació buscant els camps que van a la table view i inicialitza els combos del formulari
+     */
     public void initialize(URL location, ResourceBundle resources) {
         try {
             buscarBD();

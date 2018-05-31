@@ -15,6 +15,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+/**
+ * Pantalla de registre
+ *
+ */
 public class RegistreController implements Initializable{
     ResultSet rs;
     ConnexioBD con;
@@ -34,6 +38,10 @@ public class RegistreController implements Initializable{
 
 
     @FXML
+    /**
+     * Registre un usuari a la base de dades
+     *
+     */
     void cmdContinuar(ActionEvent event){
         System.out.println("cmdContinuar");
         System.out.println(passwordField.getText());

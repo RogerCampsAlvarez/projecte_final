@@ -18,7 +18,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-
+/**
+ * Controlador de la pantalla de modificació de les taules
+ *
+ */
 public class ModificarTaulesController implements Initializable{
     @FXML
     TextField tbNom;
@@ -34,11 +37,19 @@ public class ModificarTaulesController implements Initializable{
 
 
     @FXML
+    /**
+     * S'executa al clickar un item de la table view
+     *
+     */
     private void clickItem(MouseEvent event) {
         tbNom.setText(taula_taules.getSelectionModel().getSelectedItem().getNom());
     }
 
-
+    /**
+     * Busca tots els camps de una select a la base de dades
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     private void buscarBD() throws ClassNotFoundException, SQLException {
         int id;
         String nom;
@@ -60,18 +71,28 @@ public class ModificarTaulesController implements Initializable{
         System.out.println("Ha acavat de buscar a la base de dades");
     }
 
-
+    /**
+     * puja tots els camps dels parametres a la table view
+     * @param idTaula
+     * @param nomTaula
+     */
     private void pujarATableview(int idTaula, String nomTaula) {
         llistaTaules.add(new Taula(idTaula, nomTaula));
         taula_taules.setItems(llistaTaules);
     }
 
+    /**
+     * Borra tots els camps de la table view
+     */
     private void borrarTableView(){
         llistaTaules.clear();
         taula_taules.setItems(llistaTaules);
     }
 
     @FXML
+    /**
+     * Guarda, si son correctes, tots els camps del formulari a la base de dades
+     */
     public void cmdGuardar() throws SQLException {
         //si no s'ha seleccionat res
         if (!taula_taules.getSelectionModel().isEmpty()){
@@ -124,11 +145,18 @@ public class ModificarTaulesController implements Initializable{
         }
     }
 
+    /**
+     * Borra tots els camps del formulari
+     *
+     */
     private void borrarCampsFormulari(){
         tbNom.setText("");
     }
 
     @Override
+    /**
+     * Inicialitza l'aplicació buscant els camps que van a la table view i inicialitza els combos del formulari
+     */
     public void initialize(URL location, ResourceBundle resources) {
         try {
             buscarBD();

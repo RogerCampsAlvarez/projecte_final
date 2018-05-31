@@ -12,6 +12,9 @@ public class Main extends Application {
 	public static boolean isSplashLoaded = false;
 
 	@Override
+	/**
+	 * Mostra la pantalla splash
+	 */
 	public void start(Stage primaryStage) {
 		try {
 			Pane root = (Pane) FXMLLoader.load(getClass().getResource("Splash.fxml"));

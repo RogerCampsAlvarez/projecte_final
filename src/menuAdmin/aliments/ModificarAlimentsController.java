@@ -20,6 +20,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * Controlador de la pantalla de modificació dels aliments
+ *
+ */
 public class ModificarAlimentsController implements Initializable{
     @FXML
     TextField tbNom;
@@ -47,6 +51,10 @@ public class ModificarAlimentsController implements Initializable{
 
 
     @FXML
+    /**
+     * S'executa al clickar un item de la table view
+     *
+     */
     private void clickItem(MouseEvent event) {
         tbNom.setText(taula_aliments.getSelectionModel().getSelectedItem().getNom());
         tbPreu.setText(taula_aliments.getSelectionModel().getSelectedItem().getPreu());
@@ -55,7 +63,11 @@ public class ModificarAlimentsController implements Initializable{
         cbCategoriaa.setValue(taula_aliments.getSelectionModel().getSelectedItem().getCategoria());
     }
 
-
+    /**
+     * Busca tots els camps de una select a la base de dades
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     private void buscarBD() throws ClassNotFoundException, SQLException {
         int id;
         String nom;
@@ -85,18 +97,32 @@ public class ModificarAlimentsController implements Initializable{
         System.out.println("Ha acavat de buscar a la base de dades");
     }
 
-
+    /**
+     * puja tots els camps dels parametres a la table view
+     * @param idAliment
+     * @param nomAliment
+     * @param descripcioAliment
+     * @param preuAliment
+     * @param ordreAliment
+     * @param categoriaAliment
+     */
     private void pujarATableview(int idAliment, String nomAliment, String descripcioAliment, String preuAliment, String ordreAliment, String categoriaAliment) {
         llistaAliments.add(new Aliments(idAliment, nomAliment, descripcioAliment, preuAliment, ordreAliment, categoriaAliment));
         taula_aliments.setItems(llistaAliments);
     }
 
+    /**
+     * Borra tots els camps de la table view
+     */
     private void borrarTableView(){
         llistaAliments.clear();
         taula_aliments.setItems(llistaAliments);
     }
 
     @FXML
+    /**
+     * Guarda, si son correctes, tots els camps del formulari a la base de dades
+     */
     public void cmdGuardar() throws SQLException {
         if (!taula_aliments.getSelectionModel().isEmpty()) {
 
@@ -150,6 +176,10 @@ public class ModificarAlimentsController implements Initializable{
         }
     }
 
+    /**
+     * Borra tots els camps del formulari
+     *
+     */
     private void borrarCampsFormulari(){
         tbNom.setText("");
         tbPreu.setText("");
@@ -160,6 +190,9 @@ public class ModificarAlimentsController implements Initializable{
 
 
     @Override
+    /**
+     * Inicialitza l'aplicació buscant els camps que van a la table view i inicialitza els combos del formulari
+     */
     public void initialize(URL location, ResourceBundle resources) {
         try {
             buscarBD();
@@ -175,6 +208,6 @@ public class ModificarAlimentsController implements Initializable{
 
         ObservableList<String> categoria =
                 FXCollections.observableArrayList(c.getCategoria());
-        cbOrdre.getItems().addAll(categoria);
+        cbCategoriaa.getItems().addAll(categoria);
     }
 }
